@@ -1,0 +1,164 @@
+C:\Users\alexs\dev\c\mod0keecrack>mod0keecrack.exe "C:\Users\alexs\dev\bitcoin\Database.kdbx" "C:\Users\alexs\dev\bitcoin\simplelist.txt"
+[*] using  db: C:\Users\alexs\dev\bitcoin\Database.kdbx
+[*] using key: C:\Users\alexs\dev\bitcoin\Database.key
+[*] kdbx header:
+[-]    file magic:          9aa2d903
+[-]    file identifier:     b54bfb67
+[-]    file minor version:  0001
+[-]    file major version:  0003
+[*] kdbx headerentries:
+[-]    END:                 0D0A0D0A
+[-]    COMMENT:
+[-]    CIPHERID:            31C1F2E6BF714350BE5805216AFC5AFF
+[-]    COMPRESSIONFLAGS:    00000001
+[-]    MASTERSEED:          7652EA4F1F28BB2832B969F3145DB388DD70AA1CBB6BCFDE22BC656E8E5EA954
+[-]    TRANSFORMSEED:       7A378F67BD6DAE055D0E7E6F6AF5CAC461E5E4CB3970580C47E8A295BCBCB404
+[-]    TRANSFORMROUNDS:     0000000000d7a600
+[-]    ENCRYPTIONIV:        623EF09EB4DCE6906E35E59F1BBCEA87
+[-]    PROTECTEDSTREAMKEY:  059C36564D60C315005DB3DD419F23D25DD70B7E94527AFA0F3A21F1F8E6C4B1
+[-]    STREAMSTARTBYTES:    6716E6A623DD718FB7A85FF568B6E881DE31B7DD0C9B7699E0526A5C864C187E
+[-]    INNERRANDOMSTREAMID: 00000002
+[*] kdbx payload:
+[-]    payload offset:      de
+[-]    payload len:         2000
+[*] Not using keyfile
+[*] kdbx crack:
+# Time taken to do 100 passwords: 75s (1.3 p/s)
+
+# simplelist.txt contains only 100 passwords
+C:\Users\alexs\dev\bitcoin>C:\Users\alexs\dev\bitcoin\john\john-1.9.0-jumbo-1-win64\run\john.exe --wordlist=simplelist.txt database.txt
+Warning: detected hash type "KeePass", but the string is also recognized as "KeePass-opencl"
+Use the "--format=KeePass-opencl" option to force loading these as that type instead
+Using default input encoding: UTF-8
+Loaded 1 password hash (KeePass [SHA256 AES 32/64])
+Cost 1 (iteration count) is 14132736 for all loaded hashes
+Cost 2 (version) is 2 for all loaded hashes
+Cost 3 (algorithm [0=AES, 1=TwoFish, 2=ChaCha]) is 0 for all loaded hashes
+Will run 12 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Warning: Only 5 candidates left, minimum 12 needed for performance.
+0g 0:00:00:51 DONE (2021-12-13 22:59) 0g/s 1.967p/s 1.967c/s 1.967C/s admin3
+Session completed
+
+# simplelist.txt contains 1000 passwords
+C:\Users\alexs\dev\bitcoin\john\john-1.9.0-jumbo-1-win64\run\kernels>..\john.exe --format=KeePass-opencl --wordlist=C:\Users\alexs\dev\bitcoin\all_possibilities_short.txt C:\Users\alexs\dev\bitcoin\database.txt
+Device 1: NVIDIA GeForce RTX 3060
+Using default input encoding: UTF-8
+Loaded 1 password hash (KeePass-opencl [SHA256 AES/Twofish/ChaCha OpenCL])
+Cost 1 (iteration count) is 14132736 for all loaded hashes
+Cost 2 (version) is 2 for all loaded hashes
+Cost 3 (algorithm [0=AES, 1=TwoFish, 2=ChaCha]) is 0 for all loaded hashes
+Local worksize (LWS) 64, global worksize (GWS) 57344 (896 blocks)
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Warning: Only 1000 candidates left, minimum 57344 needed for performance.
+0g 0:00:02:20 DONE (2021-12-13 23:31) 0g/s 7.124p/s 7.124c/s 7.124C/s 5AU5AG35..3RINNYROO*3
+Session aborted
+
+# simplelist.txt contains 4000 passwords
+C:\Users\alexs\dev\bitcoin\john\john-1.9.0-jumbo-1-win64\run\kernels>..\john.exe --format=KeePass-opencl --wordlist=C:\Users\alexs\dev\bitcoin\all_possibilities_short.txt C:\Users\alexs\dev\bitcoin\database.txt
+Device 1: NVIDIA GeForce RTX 3060
+Using default input encoding: UTF-8
+Loaded 1 password hash (KeePass-opencl [SHA256 AES/Twofish/ChaCha OpenCL])
+Cost 1 (iteration count) is 14132736 for all loaded hashes
+Cost 2 (version) is 2 for all loaded hashes
+Cost 3 (algorithm [0=AES, 1=TwoFish, 2=ChaCha]) is 0 for all loaded hashes
+Local worksize (LWS) 32, global worksize (GWS) 57344 (1792 blocks)
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Warning: Only 4000 candidates left, minimum 57344 needed for performance.
+0g 0:00:04:20 DONE (2021-12-13 23:38) 0g/s 15.33p/s 15.33c/s 15.33C/s 5AU5AG35..L@ROUS5E$6
+Session completed
+
+C:\Users\alexs\dev\bitcoin\john\john-1.9.0-jumbo-1-win64\run\kernels>..\john.exe --format=KeePass-opencl --wordlist=C:\Users\alexs\dev\bitcoin\all_possibilities3_uniq.txt C:\Users\alexs\dev\bitcoin\database.txt
+Device 1: NVIDIA GeForce RTX 3060
+Using default input encoding: UTF-8
+Loaded 1 password hash (KeePass-opencl [SHA256 AES/Twofish/ChaCha OpenCL])
+Cost 1 (iteration count) is 14132736 for all loaded hashes
+Cost 2 (version) is 2 for all loaded hashes
+Cost 3 (algorithm [0=AES, 1=TwoFish, 2=ChaCha]) is 0 for all loaded hashes
+Local worksize (LWS) 64, global worksize (GWS) 458752 (7168 blocks)
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Warning: Only 288812 candidates left, minimum 458752 needed for performance.
+0g 0:05:49:16 DONE (2021-12-14 07:06) 0g/s 35.67p/s 35.67c/s 35.67C/s TH3$T3&KPLAC38..youwanner9
+Session completed
+
+
+c:\Users\alexs\dev\bitcoin\hashcat-6.2.5>hashcat.exe -m 13400 ..\test2.txt ..\all_possibilities3_uniq.txt
+hashcat (v6.2.5) starting
+
+* Device #1: WARNING! Kernel exec timeout is not disabled.
+             This may cause "CL_OUT_OF_RESOURCES" or related errors.
+             To disable the timeout, see: https://hashcat.net/q/timeoutpatch
+* Device #2: WARNING! Kernel exec timeout is not disabled.
+             This may cause "CL_OUT_OF_RESOURCES" or related errors.
+             To disable the timeout, see: https://hashcat.net/q/timeoutpatch
+CUDA API (CUDA 11.5)
+====================
+* Device #1: NVIDIA GeForce RTX 3060, 11282/12287 MB, 28MCU
+
+OpenCL API (OpenCL 3.0 CUDA 11.5.121) - Platform #1 [NVIDIA Corporation]
+========================================================================
+* Device #2: NVIDIA GeForce RTX 3060, skipped
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+* Single-Hash
+* Single-Salt
+
+Watchdog: Temperature abort trigger set to 90c
+
+Host memory required for this attack: 1475 MB
+
+Dictionary cache built:
+* Filename..: ..\all_possibilities3_uniq.txt
+* Passwords.: 747565
+* Bytes.....: 10345034
+* Keyspace..: 747565
+* Runtime...: 0 secs
+
+Cracking performance lower than expected?
+
+* Append -w 3 to the commandline.
+  This can cause your screen to lag.
+
+* Append -S to the commandline.
+  This has a drastic speed impact but can be better for specific attacks.
+  Typical scenarios are a small wordlist but a large ruleset.
+
+* Update your backend API runtime / driver the right way:
+  https://hashcat.net/faq/wrongdriver
+
+* Create more work items to make use of your parallelization power:
+  https://hashcat.net/faq/morework
+
+Approaching final keyspace - workload adjusted.
+
+$keepass$*2*60000*0*9228193f09e3865f6281a20c86325cae6e7b12790166de0743dbdb314cd47c7b*09ff5d841567bbb7ed323c74d2720f59ac01f9fca90e01d085af0af6fc4d8928*d377e3892e094b3f36577717d2a09bf2*1c3140f7a4212842f6743b5c316dc85e885463b3357e6995537a44e6a7d42bd0*ac5db60255ab8e48c1aaa78fa655efe57bf719f15e964ddd5be13f3aa6a10f44:onetwothree
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 13400 (KeePass 1 (AES/Twofish) and KeePass 2 (AES))
+Hash.Target......: $keepass$*2*60000*0*9228193f09e3865f6281a20c86325ca...a10f44
+Time.Started.....: Wed Dec 15 08:33:16 2021 (39 secs)
+Time.Estimated...: Wed Dec 15 08:33:55 2021 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (..\all_possibilities3_uniq.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:    19444 H/s (3.01ms) @ Accel:4 Loops:256 Thr:512 Vec:1
+Recovered........: 1/1 (100.00%) Digests
+Progress.........: 747565/747565 (100.00%)
+Rejected.........: 0/747565 (0.00%)
+Restore.Point....: 745472/747565 (99.72%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:59904-60000
+Candidate.Engine.: Device Generator
+Candidates.#1....: twolibr@n5$7 -> onetwothree
+Hardware.Mon.#1..: Temp: 60c Fan: 43% Util: 98% Core:1951MHz Mem:7493MHz Bus:16
+
+Started: Wed Dec 15 08:33:15 2021
+Stopped: Wed Dec 15 08:33:56 2021
